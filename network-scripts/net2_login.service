@@ -1,0 +1,13 @@
+[Unit]
+Description=Connect to net2.sharif.edu and check connection after a time period
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/mohsh/Documents/Scripts/net_login.sh 30
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target
+

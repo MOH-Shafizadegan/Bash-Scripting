@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitor CPU and Memory Usage
+After=net2_login.service
+
+[Service]
+Type=simple
+ExecStart=/home/mohsh/Documents/Scripts/shecan.sh 
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target
+
