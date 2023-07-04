@@ -1,0 +1,15 @@
+[Unit]
+Description=Monitor CPU and Memory Usage
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/mohsh/Documents/Scripts/monitor.sh 5 10 /var/log/monitor.log
+StandardOutput=journal+console
+StandardError=journal+console
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
+
